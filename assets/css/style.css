@@ -1,12 +1,14 @@
 @import url(reset.css);
 
-body {width: 1440px;}
-
 .flex {display: flex;}
 
 .column {flex-direction: column;}
 
+.column-reverse {flex-direction: column-reverse;}
+
 .justify-center {justify-content: center;}
+
+.justify-end {justify-content: flex-end;}
 
 .between-center {
     justify-content: space-between;
@@ -30,10 +32,16 @@ button {
     background: transparent;
     border: none;
 }
+button:hover, .pointer:hover {cursor: pointer;}
+
 figure, figure img {max-height: 100%; max-width: 100%;}
 
-p {font-size: 0.875rem;}
+p, .sugestion-info h2 {font-size: 0.875rem;}
 
+a {
+    color: #000;
+    text-decoration: none;
+}
 header {
     height: 3.5rem;
     padding: 0 1.5rem;
@@ -100,18 +108,14 @@ h1 {
 }
 .video-acions {height: 2.625rem;}
 
-.video-acions > * {gap: 2.625rem;}
+.video-acions > * {gap: 1rem;}
 
 .info {gap: 0.75rem;}
 
-.info > span {font-weight: 600;}
+.channel-name, .views, .sugestion-info h2 {font-weight: 600;}
 
-.channel-name {font-weight: 600;}
+.subscribed, .description, .sugestion-info * {color: #515151;}
 
-.subscribed {
-    color: #515151;
-    font-weight: 400;
-}
 .subscribe {
     width: 10rem;
     background: #C00;
@@ -137,4 +141,14 @@ h1 {
 
 .sugestions {
     width: 23.25rem;
+    gap: 1rem;
 }
+.sugestion {
+    height: 5.625rem;
+    gap: 1rem;
+}
+.sugestion-info {
+    width: 12.25rem;
+    gap: 0.75rem;
+}
+.sugestion-info * {font-size: 0.75rem;}
